@@ -24,7 +24,7 @@ let schema = new mongoose.Schema(
   verificationToken: String,
     isVerified: {
       type: Boolean,
-      default: false,
+      default: true,
     },
   },
   { collation: { locale: "en" } }

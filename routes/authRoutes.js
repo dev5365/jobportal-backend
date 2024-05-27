@@ -47,7 +47,7 @@ router.post('/forgot-password', async (req, res) => {
       subject: 'Password Reset Request',
       html: `<p>You are receiving this because you (or someone else) have requested the reset of the password for your account.</p>
              <p>Please click on the following link to reset your password:</p>
-             <p><a href="http://localhost:3000/reset-password/${token}">Reset Password Link</a></p>`
+             <p><a href="https://effortless-basbousa-ef1bb9.netlify.app/reset-password/${token}">Reset Password Link</a></p>`
     };
 
     await transporter.sendMail(mailOptions);
@@ -128,8 +128,8 @@ router.post("/signup", async (req, res) => {
       from: 'devchoudharyias32@gmail.com',
       to: data.email,
       subject: 'Email Verification',
-      html: `<p>Please verify your email by clicking on the following link:</p>
-             <p><a href="http://localhost:3000/verify-email/${verificationToken}">Verify Email</a></p>`,
+      html: `<p>verifying your email:</p>
+             
     };
 
     await transporter.sendMail(mailOptions);
