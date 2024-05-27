@@ -128,8 +128,8 @@ router.post("/signup", async (req, res) => {
       from: 'devchoudharyias32@gmail.com',
       to: data.email,
       subject: 'Email Verification',
-      html: `<p>verifying your email:</p>
-             
+      html: `<p>Please verify your email by clicking on the following link:</p>
+             <p><a href="https://effortless-basbousa-ef1bb9.netlify.app/verify-email/${verificationToken}">Verify Email</a></p>`,
     };
 
     await transporter.sendMail(mailOptions);
